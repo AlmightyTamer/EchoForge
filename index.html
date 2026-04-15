@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EchoForge — Forge Change. Create Impact.</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">🔥 EchoForge</a>
+  <div class="nav-links">
+    <a href="#issues">Issues</a>
+    <a href="#forge">Forge</a>
+    <a href="#projects">Projects</a>
+    <a href="#community">Community</a>
+  </div>
+  <button class="nav-cta" onclick="scrollToForge()">Start Forging →</button>
+</nav>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1800&q=85&fit=crop" alt="Earth from space" class="hero-img" id="heroImg" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal">HackAmerica 2026 &nbsp;·&nbsp; Social Impact Platform</div>
+    <h1 class="hero-title reveal delay-1">
+      Your voice.<br/>
+      <span class="hero-title-accent">Their future.</span>
+    </h1>
+    <p class="hero-sub reveal delay-2">
+      Real issues. AI-powered plans. Student-led change.<br/>
+      Discover what's broken in your community — then forge the fix.
+    </p>
+    <div class="hero-actions reveal delay-3">
+      <button class="btn-primary" onclick="scrollToForge()">⚡ Forge an Impact Project</button>
+      <button class="btn-ghost" onclick="document.getElementById('issues').scrollIntoView({behavior:'smooth'})">Explore Issues ↓</button>
+    </div>
+    <div class="hero-stats reveal delay-4">
+      <div class="stat"><span class="stat-num" data-target="12400">0</span><span class="stat-label">Students Reached</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-target="348">0</span><span class="stat-label">Projects Forged</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-target="89">0</span><span class="stat-label">Communities Impacted</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ ISSUES ═══════════════════════════ -->
+<section id="issues">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Real Problems. Real Places.</div>
+    <h2 class="section-title">Issues Worth Fighting For</h2>
+    <p class="section-sub">Pick one. Forge your plan. Start today.</p>
+  </div>
+
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="environment">🌱 Environment</button>
+    <button class="filter-btn" data-filter="mental-health">🧠 Mental Health</button>
+    <button class="filter-btn" data-filter="education">📚 Education</button>
+    <button class="filter-btn" data-filter="food">🍎 Food</button>
+    <button class="filter-btn" data-filter="tech">💻 Tech Access</button>
+  </div>
+
+  <div class="bento-grid" id="issuesGrid">
+
+    <!-- Issue 1 — Large card -->
+    <div class="bento-card bento-large issue-card reveal" data-category="food"
+         data-issue="School Lunch Waste in Massachusetts">
+      <div class="card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=900&q=80&fit=crop" alt="Food waste" loading="lazy" />
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">🍎 Food · Massachusetts</span>
+        <h3>School Lunch Waste</h3>
+        <p>MA public schools discard 20–40% of served food daily — tons of nutrition straight to landfills while students go hungry.</p>
+        <div class="severity-bar"><div class="severity-fill" style="width:78%"></div></div>
+        <div class="card-meta"><span>78% severity</span><span>📄 MA Dept of Ed, 2024</span></div>
+      </div>
+      <button class="forge-this" onclick="prefillForge('School Lunch Waste in Massachusetts')">⚡ Forge This Issue →</button>
+    </div>
+
+    <!-- Issue 2 -->
+    <div class="bento-card issue-card reveal delay-1" data-category="mental-health"
+         data-issue="Teen Mental Health Crisis">
+      <div class="card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=700&q=80&fit=crop" alt="Teen mental health" loading="lazy" />
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">🧠 Mental Health · National</span>
+        <h3>Teen Mental Health Crisis</h3>
+        <p>1 in 5 teens has a diagnosable disorder. 60% never receive care. Counselor ratios hit 1:400 — nearly double the recommended limit.</p>
+        <div class="severity-bar"><div class="severity-fill" style="width:91%"></div></div>
+        <div class="card-meta"><span>91% severity</span><span>📄 CDC, 2024</span></div>
+      </div>
+      <button class="forge-this" onclick="prefillForge('Teen Mental Health Crisis')">⚡ Forge This Issue →</button>
+    </div>
+
+    <!-- Issue 3 -->
+    <div class="bento-card issue-card reveal delay-2" data-category="tech"
+         data-issue="Digital Divide in Rural Schools">
+      <div class="card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80&fit=crop" alt="Digital divide" loading="lazy" />
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">💻 Tech Access · Rural</span>
+        <h3>Digital Divide in Rural Schools</h3>
+        <p>12M+ K-12 students lack reliable home internet. Homework, remote learning, college apps — all out of reach.</p>
+        <div class="severity-bar"><div class="severity-fill" style="width:85%"></div></div>
+        <div class="card-meta"><span>85% severity</span><span>📄 FCC Report, 2024</span></div>
+      </div>
+      <button class="forge-this" onclick="prefillForge('Digital Divide in Rural Schools')">⚡ Forge This Issue →</button>
+    </div>
+
+    <!-- Issue 4 — Large card -->
+    <div class="bento-card bento-large issue-card reveal" data-category="environment"
+         data-issue="Climate Anxiety Among Gen Z">
+      <div class="card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&q=80&fit=crop" alt="Climate" loading="lazy" />
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">🌱 Environment · National</span>
+        <h3>Climate Anxiety Among Gen Z</h3>
+        <p>68% of teens feel daily anxiety about climate change. Schools rarely provide structured ways to channel that fear into action.</p>
+        <div class="severity-bar"><div class="severity-fill" style="width:72%"></div></div>
+        <div class="card-meta"><span>72% severity</span><span>📄 APA, 2024</span></div>
+      </div>
+      <button class="forge-this" onclick="prefillForge('Climate Anxiety Among Gen Z')">⚡ Forge This Issue →</button>
+    </div>
+
+    <!-- Issue 5 -->
+    <div class="bento-card issue-card reveal delay-1" data-category="education"
+         data-issue="Lack of STEM Role Models for Girls">
+      <div class="card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&q=80&fit=crop" alt="STEM girls" loading="lazy" />
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">📚 Education · Massachusetts</span>
+        <h3>STEM Role Models for Girls</h3>
+        <p>Girls hold only 28% of STEM jobs. Visible mentorship in middle & high school is the #1 identified missing link.</p>
+        <div class="severity-bar"><div class="severity-fill" style="width:69%"></div></div>
+        <div class="card-meta"><span>69% severity</span><span>📄 AAUW, 2024</span></div>
+      </div>
+      <button class="forge-this" onclick="prefillForge('Lack of STEM Role Models for Girls')">⚡ Forge This Issue →</button>
+    </div>
+
+    <!-- Issue 6 -->
+    <div class="bento-card issue-card reveal delay-2" data-category="environment"
+         data-issue="Urban Heat Islands in Boston">
+      <div class="card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700&q=80&fit=crop" alt="City heat" loading="lazy" />
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">🌡️ Environment · Boston</span>
+        <h3>Urban Heat Islands in Boston</h3>
+        <p>Low-income Boston neighborhoods run 10°F hotter than wealthy areas — fewer trees, more asphalt, worse health outcomes.</p>
+        <div class="severity-bar"><div class="severity-fill" style="width:80%"></div></div>
+        <div class="card-meta"><span>80% severity</span><span>📄 EPA, 2023</span></div>
+      </div>
+      <button class="forge-this" onclick="prefillForge('Urban Heat Islands in Boston')">⚡ Forge This Issue →</button>
+    </div>
+
+    <!-- Issue 7 -->
+    <div class="bento-card issue-card reveal" data-category="food"
+         data-issue="Food Deserts in Urban Schools">
+      <div class="card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=700&q=80&fit=crop" alt="Food desert" loading="lazy" />
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">🥗 Food · Urban</span>
+        <h3>Food Deserts in Urban Schools</h3>
+        <p>35M Americans live in food deserts — 12M are children. School lunch is often their only nutritious meal of the day.</p>
+        <div class="severity-bar"><div class="severity-fill" style="width:88%"></div></div>
+        <div class="card-meta"><span>88% severity</span><span>📄 USDA, 2024</span></div>
+      </div>
+      <button class="forge-this" onclick="prefillForge('Food Deserts in Urban Schools')">⚡ Forge This Issue →</button>
+    </div>
+
+    <!-- Issue 8 -->
+    <div class="bento-card issue-card reveal delay-1" data-category="education"
+         data-issue="Chronic Absenteeism Post-Pandemic">
+      <div class="card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700&q=80&fit=crop" alt="Empty classroom" loading="lazy" />
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">🏫 Education · National</span>
+        <h3>Chronic Absenteeism Post-Pandemic</h3>
+        <p>1 in 4 students is now chronically absent — double the pre-COVID rate. Mental health, unsafe travel, and poverty are root causes.</p>
+        <div class="severity-bar"><div class="severity-fill" style="width:83%"></div></div>
+        <div class="card-meta"><span>83% severity</span><span>📄 Stanford Ed, 2024</span></div>
+      </div>
+      <button class="forge-this" onclick="prefillForge('Chronic Absenteeism Post-Pandemic')">⚡ Forge This Issue →</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FORGE STUDIO ═══════════════════════════ -->
+<section id="forge">
+  <div class="forge-bg">
+    <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1600&q=80&fit=crop" alt="Forge background" class="forge-bg-img" />
+    <div class="forge-bg-overlay"></div>
+  </div>
+
+  <div class="forge-container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Powered by Llama-3 · Groq</div>
+      <h2 class="section-title">AI Forge Studio</h2>
+      <p class="section-sub">Turn any issue into a 5-step action plan in seconds.</p>
+    </div>
+
+    <div class="forge-grid">
+      <!-- Left: Input panel -->
+      <div class="forge-input-panel reveal">
+        <div class="input-group">
+          <label>Your Issue</label>
+          <select id="issueSelect">
+            <option value="">— Choose a pre-loaded issue —</option>
+            <option>School Lunch Waste in Massachusetts</option>
+            <option>Teen Mental Health Crisis</option>
+            <option>Digital Divide in Rural Schools</option>
+            <option>Climate Anxiety Among Gen Z</option>
+            <option>Lack of STEM Role Models for Girls</option>
+            <option>Urban Heat Islands in Boston</option>
+            <option>Food Deserts in Urban Schools</option>
+            <option>Chronic Absenteeism Post-Pandemic</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Or describe your own</label>
+          <input type="text" id="customIssue" placeholder="e.g., No mental health counselors at my school..." />
+        </div>
+        <div class="input-group">
+          <label>Your name / team</label>
+          <input type="text" id="creatorName" placeholder="e.g., Team Spark" />
+        </div>
+        <div class="input-group">
+          <label>Project Tone</label>
+          <div class="tone-picker">
+            <button class="tone-btn active" data-tone="Bold & Ambitious">🔥 Bold</button>
+            <button class="tone-btn" data-tone="Grassroots & Local">🌱 Grassroots</button>
+            <button class="tone-btn" data-tone="Creative & Artistic">💡 Creative</button>
+          </div>
+        </div>
+        <button class="btn-forge" id="forgeBtn" onclick="forgeProject()">
+          <span id="forgeBtnText">🔨 FORGE MY PROJECT</span>
+          <div class="forge-spinner" id="forgeSpinner" style="display:none"></div>
+        </button>
+      </div>
+
+      <!-- Right: Output panel -->
+      <div class="forge-output-panel reveal delay-2">
+        <div id="forgePlaceholder" class="forge-placeholder">
+          <div class="placeholder-icon">⚡</div>
+          <p>Your AI-generated action plan<br/>will appear here.</p>
+        </div>
+        <div id="forgeResult" class="forge-result" style="display:none">
+          <div class="result-header">
+            <span class="result-eyebrow">Your Project</span>
+            <h3 id="resultName"></h3>
+            <p id="resultIssueLabel"></p>
+          </div>
+          <p id="resultSummary" class="result-summary"></p>
+          <div class="result-steps">
+            <h4>Action Steps</h4>
+            <ol id="resultStepsList"></ol>
+          </div>
+          <div class="result-metrics">
+            <div class="result-metric">
+              <span class="metric-label">Estimated Impact</span>
+              <span class="metric-val" id="resultImpact"></span>
+            </div>
+            <div class="result-metric">
+              <span class="metric-label">Timeline</span>
+              <span class="metric-val" id="resultTimeline"></span>
+            </div>
+          </div>
+          <div class="result-actions">
+            <button class="btn-primary" onclick="saveProject()">💾 Save to Dashboard</button>
+            <button class="btn-ghost" onclick="shareProject()">📤 Share</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ MY PROJECTS ═══════════════════════════ -->
+<section id="projects">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Your Impact Journey</div>
+    <h2 class="section-title">My Projects</h2>
+    <p class="section-sub">Track progress. Measure impact. Export your portfolio.</p>
+  </div>
+
+  <div id="projectsStats" class="projects-stats reveal" style="display:none">
+    <div class="pstat"><span class="pstat-num" id="statProjects">0</span><span class="pstat-label">Forged</span></div>
+    <div class="pstat"><span class="pstat-num" id="statReached">0</span><span class="pstat-label">People Reached</span></div>
+    <div class="pstat"><span class="pstat-num" id="statActions">0</span><span class="pstat-label">Actions Taken</span></div>
+    <div class="pstat"><span class="pstat-num" id="statProgress">0%</span><span class="pstat-label">Avg Progress</span></div>
+  </div>
+
+  <div id="projectsEmpty" class="projects-empty reveal">
+    <div class="empty-icon">🚀</div>
+    <h3>No projects yet</h3>
+    <p>Head to the AI Forge Studio and create your first impact project.</p>
+    <button class="btn-primary" onclick="scrollToForge()">⚡ Start Forging</button>
+  </div>
+
+  <div id="projectsList" class="projects-list"></div>
+
+  <div id="exportWrap" style="display:none;text-align:center;margin-top:40px" class="reveal">
+    <button class="btn-primary btn-large" onclick="exportPortfolio()">📦 Export Full Portfolio</button>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ COMMUNITY ═══════════════════════════ -->
+<section id="community">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Changemakers Worldwide</div>
+    <h2 class="section-title">Community Feed</h2>
+    <p class="section-sub">Like it. Fork it. Build on it.</p>
+  </div>
+
+  <div class="community-search reveal">
+    <input type="text" id="communitySearch" placeholder="🔍 Search projects, issues, creators..." oninput="renderCommunity()" />
+  </div>
+
+  <div class="community-grid" id="communityGrid"></div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">🔥 EchoForge</div>
+    <p class="footer-sub">Built for HackAmerica 2026 · Powered by Groq + Llama-3 · Made with ❤️ for student changemakers</p>
+    <div class="footer-links">
+      <a href="#hero">Home</a>
+      <a href="#issues">Issues</a>
+      <a href="#forge">Forge</a>
+      <a href="#projects">Projects</a>
+      <a href="#community">Community</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════ SAVE MODAL ═══════════════════════════ -->
+<div id="saveModal" class="modal-overlay" style="display:none" onclick="closeSaveModal(event)">
+  <div class="modal">
+    <h3>✅ Project Saved!</h3>
+    <p>Your project has been added to your dashboard.</p>
+    <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});closeSaveModal()">View Dashboard →</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
